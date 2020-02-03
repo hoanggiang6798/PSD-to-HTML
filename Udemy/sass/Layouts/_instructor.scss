@@ -1,0 +1,24 @@
+// INSTRUCTOR
+.instructor{
+    border-bottom: 1px solid #e8e9eb;
+    .instructor__content{
+        @include containerNew;
+        padding: 3rem 0;
+        ul{
+            list-style: none;
+            max-width: 33%;
+            flex: 0 0 33%;
+            .instructor__items{
+                margin-bottom: 1rem;
+                a{
+                    @include styleTitle($fs-0, $fw-1, $lh-4, $color-blue-0);
+                }
+                &--bold{
+                    a{
+                        font-weight: $fw-4;
+                    }
+                }
+            }
+        }
+    }
+}

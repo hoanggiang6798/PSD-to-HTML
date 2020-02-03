@@ -1,0 +1,22 @@
+footer{
+    .footer__content{
+        @include containerNew;
+        margin: 3rem auto;
+        justify-content: space-between;
+        span{
+            padding-left: 2rem;
+            color: $color-gray-1;
+            font-size: $fs-0;
+        }
+        ul{
+            text-align: right;
+            li{
+                display: inline;
+                margin-left: 1.5rem;
+                a{
+                    @include styleTitle($fs-0, $fw-1, $lh-4, $color-blue-0);
+                }
+            }
+        }
+    }
+}

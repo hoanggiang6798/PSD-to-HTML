@@ -1,0 +1,14 @@
+@mixin bgGradient($color0, $color1){
+    background-image: linear-gradient(to right, $color0, $color1);
+}
+
+@mixin sectionTitle($color, $fs, $letter-sp, $mr-y) {
+    color: $color;
+    font-size: $fs;
+    letter-spacing: $letter-sp;
+    margin-bottom: $mr-y;;
+}
+
+@mixin sectionSpacingY($pd-y){
+    padding: $pd-y 0;
+}

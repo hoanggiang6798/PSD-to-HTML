@@ -1,0 +1,27 @@
+// CAROUSEL 
+.udemyCarousel{
+    background-image: url('../img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    position: relative;
+    .udemyCarousel__content{
+        max-width: 46rem;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        h2{
+            @include styleTitle($fs-3, $fw-0, $lh-0, $color-white-0);
+            text-shadow: 0 2px 4px rgba(41,48,59,.55);
+            margin-bottom: 2rem;
+        }
+        p{
+            @include styleText($fs-2 - 1, $lh-1, $color-white-0);
+            margin-bottom: 2rem;
+        }
+        .formSearch{
+            @include styleForm($color-white-0);
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.movieCarousel .carousel-indicators{
+    justify-content: flex-start;
+}
+.movieCarousel .carousel-indicators li{
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    background-color: black;
+}
+.movieCarousel .carousel-indicators li.active{
+  background-color: white;
+}
+.movieCarousel .carousel-item{
+    position: relative;
+    height: 67rem;
+    overflow: hidden;
+}
+
+.movieCarousel .carousel__content{
+    text-align: left;
+    top: 30%;
+    left: 15%;
+    opacity: 0;
+    animation: scale .5s .5s forwards;
+}
+
+.content__category{ 
+    color: $color-orange-0;
+    font-size: $fs-2;
+    margin-bottom: 1.5rem;
+}
+.content__title {
+    font-size: 5.2rem;
+    font-weight: $fw-0;
+}
+.content__des{
+    font-size: $fs-1;
+}
+
+.movieCarousel .row p.pg{
+    font-size: 1.3rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 4.8rem;
+    text-align: center;
+    font-weight: $fw-1;
+    margin-right: 1rem;
+}
+.movieCarousel .row a button{
+    @include bgGradient($color-orange-0, $color-orange-1);
+    height: 85%;  
+    padding: 1.2rem 2.4rem; 
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    color: white;
+    border-radius: 3rem;;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.movieCarousel .row button .button__text{
+    position: relative;
+    z-index: 10;
+}
+.movieCarousel .row button p.bg__color{
+    position: absolute;
+    bottom: -1rem;
+    left: -1.5rem;
+    transition: all .5s;
+    width: 0;
+    z-index: 0;
+    height: 100%;
+    background: rgb(236, 117, 50);
+    transform: skewX(30deg);
+}
+.movieCarousel .row button:hover p.bg__color{
+    width: 130%;
+}
+.movieCarousel ol.carousel-indicators{
+    bottom: 15%;
+}
+.movieCarousel .img__angle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    animation: leftright 1.5s infinite;
+}
+@keyframes scale{
+    0%{
+        transform: scale(1.15);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes leftright{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(.3rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

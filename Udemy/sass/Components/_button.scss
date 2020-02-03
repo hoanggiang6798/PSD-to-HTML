@@ -1,0 +1,16 @@
+.btnWhite{
+    @include btnStyle($pd-0, $pd-1, $color-gray-1,  $color-gray-1, $fs-1);
+    background-color: white;
+    &:hover{
+        @include btnStyleHover($color-black-3, $color-white-0, $color-black-3);
+    }
+}
+
+.btnRed{
+    @include btnStyle($pd-0, $pd-1, $color-trans, $color-white-0, $fs-1);
+    background-color: #EC5252;
+    border-radius: .2rem;
+    &:hover{
+        @include btnStyleHover($color-white-0, $color-hover-2, $color-trans);
+    }
+}

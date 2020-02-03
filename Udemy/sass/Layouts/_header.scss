@@ -1,0 +1,73 @@
+// HEADER 
+.udemyNav{
+    @include containerNew;
+    .header__left{
+        display: flex;
+        align-items: center;
+        .categories{
+            flex-grow: 2;
+            @include btnStyle($pd-1, $pd-3, $color-trans, $color-gray-2, $fs-0);
+            &:hover{
+                @include btnStyleHover($color-gray-2, $color-gray-3, $color-border);
+            }
+        }
+        .navbar-brand{
+            flex-grow: 2;
+        }
+        .formSearch{
+            flex-grow: 60;
+            background-color: $color-gray-4;
+            border-radius: .2rem; 
+            &:focus-within{
+                background-color: white;
+                border: 1px solid $color-border-1;
+            }
+            .formSearch__inp{
+                padding: $pd-2 $pd-1;
+                height: 100%;
+                background-color: transparent;
+                border-color: transparent;
+                font-size: $fs-0; 
+                color: $color-black-3;
+                &:focus{
+                    box-shadow: none;
+                }
+                
+            }
+            .udemySearch{
+                background-color: transparent;
+                @include btnStyle($pd-0, $pd-1, $color-trans, $color-red-0, $fs-1)
+            }
+        }
+    }
+    .header__right{
+        .udemy__items{
+            padding: $pd-1 $pd-3;
+            a{
+                color: $color-gray-2;
+                border: none;
+                font-size: $fs-0;
+            }
+            &:hover{
+                @include btnStyleHover($color-gray-2, $color-gray-3, $color-border);
+                border-radius: .2rem;
+            }
+            &:nth-child(2){
+                border-right: 1px solid $color-focus;
+            }
+        }
+        .udemyNav__cart{
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 50%;
+            line-height: 4.4rem;
+            text-align: center;
+            font-size: $fs-2 + 1;
+            margin: 0 1rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-gray-3;
+            }
+        }
+    }
+}

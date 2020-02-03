@@ -1,0 +1,68 @@
+// comingSoon__list 
+.comingSoon__list{
+    background-color: black;
+    .container{
+        @include sectionSpacingY($pd-2);
+        .newIn__content{
+            position: relative;
+            .newIn__icon{
+                position: absolute;
+                font-size: $fs-3;
+                transition: all .5s ease-in-out;
+                color: $color-orange-0;
+                outline: none;
+                cursor: pointer;
+            }
+            .newIn__icon--left{
+                top: 40%;
+                left: -5rem;
+                &:hover{
+                    transform: translateX(20%);
+                }
+            }
+            .newIn__icon--right{
+                top: 40%;
+                right: -5rem;
+                &:hover{
+                    transform: translateX(-20%);
+                }
+            }
+            .newIn__items{
+                margin: 0 $mg-1;
+                padding: 0;
+                opacity: 0.35;
+                transition: all .5s;
+                &:hover{
+                    opacity: 1;
+                }
+                .newIn__img{
+                    border-radius: 1rem;
+                    margin-bottom: $mg-y-4;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 0;
+                    
+                }
+                h2{
+                    font-size: $fs-1;
+                    color: white;
+                    margin: 0 0 1.3rem 0;
+                }
+                p{
+                    font-size: 1.4rem;
+                    color: white;
+                    i{
+                        font-size: $fs-0;
+                        width: 1.8rem;
+                        color: $color-orange-0;
+                        margin: 0 .3rem;
+                    }
+                    .star__gray{
+                        color: $color-gray-1;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

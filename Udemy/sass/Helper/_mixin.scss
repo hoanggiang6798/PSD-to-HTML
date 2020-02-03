@@ -1,0 +1,134 @@
+// MIXIN 
+@mixin btnStyle($pd-x, $pd-y, $border-color, $color, $fs){
+    padding: $pd-x $pd-y;
+    border: 1px solid $border-color;
+    color: $color;
+    font-size: $fs;
+}
+
+@mixin bgLinear {
+    background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+}
+
+@mixin btnStyleHover($color, $bgColor, $bderColor){
+    color: $color;
+    background-color: $bgColor;
+    border-color: $bderColor;
+}
+
+@mixin containerNew{
+    max-width: 140.5rem;
+    margin:  0 auto;
+}
+
+@mixin styleTitle($fs, $fw, $lineh, $color){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lineh;
+    color: $color;
+}
+
+@mixin styleText($fs, $lineh, $color){
+    font-size: $fs;
+    line-height: $lineh;
+    color: $color;
+}
+
+@mixin styleForm($bgColor){
+    .formSearch__inp{
+        padding: $pd-2 $pd-1;
+        height: 100%;
+        background-color: $bgColor;
+        border-right: none;
+        font-size: $fs-2 + 1; 
+        color: $color-black-3;
+        &:focus{
+            box-shadow: none;
+        }
+        
+    }
+    .udemySearch{
+        background-color: $bgColor;
+        @include btnStyle($pd-0, $pd-1, $color-trans, $color-red-0, $fs-1)
+    }
+}
+
+@mixin autoPlay {
+    .udemySlide{
+        padding: 2rem 0;
+        .udemySlide__icon{
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            width: 4.7rem;
+            height: 4.7rem;
+            line-height: 2;
+            text-align: center;
+            box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+            opacity: 1;
+            transition: 300ms;
+            font-size: 2.4rem;
+            border-radius: 50%;
+            background-color: white;
+            color: $color-blue-0;
+            &:hover{
+                box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                color: #00576b;
+            }
+        }
+        .udemySlide__icon--left{
+            left: -10px;
+        }
+        .udemySlide__icon--right{
+            right: -10px;
+        }
+        .udemySlide__items{
+            margin: 0 $mg-2;
+            padding: 0;
+            box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+            .udemySlide__items--text{
+                padding: $mg-2 $mg-2 - 5 $mg-0 $mg-2;
+                h2{
+                    @include styleTitle($fs-1, $fw-0, $lh-2, $color-black-3);
+                    margin-bottom: 1rem;
+                    text-overflow: ellipsis;
+                }
+                p{
+                    margin-bottom: 1.4rem;
+                    @include styleTitle($fs-0 - 1, $fw-1, $lh-2, $color-gray-1);
+                }
+                .udemy__items__star{
+                    color: #f4c150;
+                    i{
+                        margin-left: .3rem;
+                    }
+                    .fa-star-half-alt{
+                        color: #dedfe0;
+                        
+                    }
+                }
+                .starRating{
+                    margin-left: .5rem;
+                    color: $color-gray-2;
+                    font-weight: $fw-0;
+                    font-size: small;
+                }
+                .starRatingText{
+                    font-size: $fs-0 - 1 ;
+                    font-weight: $fw-1;
+                    color: $color-gray-1;
+                    margin-left: .5rem;
+                }
+                .udemy__itemsPrice{
+                    margin-top: 1rem;
+                    text-align: right;
+                    min-height: 3.6rem;
+                    margin-right: 1rem;
+                    font-weight: $fw-0;
+                    font-size: $fs-2 - 1;
+                    color: $color-black-3;
+                }
+            }
+        }   
+    }
+}

@@ -1,0 +1,29 @@
+// udemyCourse 
+.udemyCourse{
+    background: linear-gradient(-45deg, $color-red-0 0%,$color-lg-1 100%);
+    .udemyCourse__content{
+        max-width: 140.5rem;
+        margin: 0 auto;
+        padding: $pd-3 $pd-3;
+        .udemyCourse__items{
+            align-items: center;
+            .udemyCourse__icon{
+                color: white;
+                font-size: 4.7rem;
+                text-align: center;
+            }
+            .udemyCourse__text{
+                color: white;
+               padding: 0;
+                
+                h2{
+                    font-size: $pd-3 + 2;
+                    font-weight: 700;      
+                }
+                p{
+                    font-size: $pd-3;
+                }       
+            }
+        }
+    }
+}

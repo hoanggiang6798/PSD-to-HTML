@@ -1,0 +1,51 @@
+// CATEGORIES
+.categories{
+    @include containerNew;
+    h2{
+        margin-left: 15px;
+        @include styleTitle($fs-4, $fw-0, $lh-0, $color-black-3);
+    }
+    .categories__content{
+        margin: 1rem 0;
+        align-items: center;
+        .categories__items{
+            max-width: 22%;
+            margin: 0 $mg-2;
+            cursor: pointer;
+            @include btnStyle($pd-3, $pd-3, $color-border-1, $color-black-4, $fs-1);
+            &:before{
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                transition: all 300ms;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transition: .2s ease;
+                pointer-events: none;
+            }
+            &:hover{
+                &:before{
+                    box-shadow: 0 0 3px 3px rgba(20,23,28,.1), 0 3px 3px 0 rgba(20,23,28,.1);
+                    opacity: 1;
+                }
+            }
+            .categories__items__icon{
+                font-size: 3.2rem;
+                padding-right: 1.6rem;
+                
+            }
+            span{
+                display: inline-block;
+                height: 32px;
+                line-height: 35px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: 1;
+                min-width: 1px;
+            }
+        }
+    }
+}

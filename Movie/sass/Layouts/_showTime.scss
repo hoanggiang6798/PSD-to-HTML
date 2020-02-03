@@ -1,0 +1,105 @@
+// showTime
+
+.showTime__content{
+    padding: $pd-1 - 5 0;
+    hr{
+        margin: 3rem 0 ;
+    }
+    .showTime__content__img{
+        border-radius: 1rem;
+    }
+    .showTime__content--right{
+        .content__category{
+            color: $color-orange-1;
+            font-size: $fs-2;
+        }
+        .content__title{
+            font-size: 2.4rem;
+            letter-spacing: .1rem;
+            color: $color-black-1;
+        }
+        .content__des{
+            color: $color-gray-2;
+            font-size: $fs-0;
+            margin: 0 0 2rem 0;
+        }
+        .syn__link{
+            color: $color-orange-1;
+            font-size: $fs-2 - 2;
+            letter-spacing: .4rem;
+            margin: 0 0 2rem 0;
+            display: block;
+            transition: all .5s;
+            &:hover{
+                color: $color-black-1;
+            }
+        }
+        .showTime__icon{
+            font-size: 1.2rem;
+            color: $color-gray-3;
+            letter-spacing: .15rem;
+        }
+        .showTime__time{
+            padding: .7rem 1rem;
+            font-size: $fs-2;
+            margin-left: .5rem;
+            color: $color-gray-2;
+            background-color: $color-gray-1;
+            border-radius: .5rem;
+            letter-spacing: .2rem;
+        }
+        .disable{
+            opacity: 0.5;
+        }
+        .pg{
+            font-size: 1.3rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            line-height: 3.3rem;
+            text-align: center;
+            font-weight: $fw-1;
+            background-color: $color-gray-3;
+            display: inline-block;
+            color: white;
+            margin-left: .5rem;
+        }
+    }
+}
+.showTimes{
+    .showTimes__nav{
+        border-bottom: 1px solid $color-gray-1;
+        .showTimes__items{
+            font-size: $fs-1;
+            padding: 1rem 3rem 1.5rem 3rem;
+            letter-spacing: .1rem;
+            border: none;
+            border-bottom: 1px solid $color-gray-4;
+            position: relative;
+            color: $color-gray-3;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;;
+                left: 0;
+                width: 0;
+                height: .4rem;
+                @include bgGradient($color-orange-0, $color-orange-1);
+                transition: all .5s;
+                
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        .showTimes__items.active{
+            color: #ec7532;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+
+}

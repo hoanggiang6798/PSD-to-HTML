@@ -1,0 +1,100 @@
+// COMMENT
+.comment{
+    padding: 1rem 0;
+    background: $color-gray-3;
+    .comment__containerNew{
+        @include containerNew;
+        h2{
+            margin: 2rem 0;
+            @include styleTitle($fs-4, $fw-0, $lh-0, $color-black-3);
+        }
+        .comment__content{
+            .udemySlide__icon{
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                width: 4.7rem;
+                height: 4.7rem;
+                line-height: 2;
+                text-align: center;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                opacity: 1;
+                transition: 300ms;
+                font-size: 2.4rem;
+                border-radius: 50%;
+                background-color: white;
+                color: $color-blue-0;
+                &:hover{
+                    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                    color: #00576b;
+                }
+            }
+            .udemySlide__icon--left{
+                left: -20px;
+            }
+            .udemySlide__icon--right{
+                right: -20px;
+            }
+        }
+        .comment__items{
+            max-width: 32%;
+            flex: 0 0 32%;
+            margin-right: $mg-2 - 2;
+            background-color: $color-white-0;
+            border-radius: .3rem;
+            box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+            padding: 32px;
+            .comment__author{
+                margin-bottom: 1.8rem;
+                span{
+                    @include styleTitle($fs-1 + 1, $fw-0, $lh-3, $color-black-3);
+                }
+                img{
+                    display: inline;
+                    border-radius: 50%;
+                    margin-right: $mg-2 + 3;
+                }
+            }
+            .comment__text{
+                @include styleTitle($fs-1 + 1, $fw-1, $lh-3, $color-black-3);
+            }
+        }
+
+    }
+    .commentCompany{
+        text-align: center;
+        @include styleTitle($fs-0, $fw-3, $lh-2, $color-gray-1);
+        padding-top: 5rem;
+        li{
+            display: inline-block;
+            margin: 2rem 3.2rem .8rem;
+        }
+        .commentCompany__content{
+            margin: 0;
+            justify-content: space-between;
+            a{
+                @include styleTitle($fs-2, $fw-0, $lh-2, $color-gray-2);
+            }
+            p{
+                @include styleTitle($fs-2, $fw-0, $lh-2, $color-gray-2);
+                font-weight: 400;
+               
+            }
+            button{
+                margin-top: 1rem;
+            }
+            .commentCompany__items{
+                border-right: 1px solid $color-focus;
+                &:nth-child(2){
+                    border: none;
+                }
+                .commentCompany__left__text{
+                    padding: 5rem 0;
+                    max-width: 40rem;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+    }
+}
